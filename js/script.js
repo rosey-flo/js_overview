@@ -1,126 +1,57 @@
-//psuedocoding is way to start the layout of the code
+//review: we have talked about:
+const str = 'some string';
+const num = 10;
+const bool = true;
+const arr = ['john', 'Bob', 'Steve'];
 
-/* 
-Create a function that takes 3 arguments
--Thie first and second argument will be a number
--The third argument will be a mathmatical operator (+, -, *, /)
 
-ExampleL if the operator is a "+" then you will add the two numbers together and console log the sum
-*/
+//this is for key value pairs
+//name and age, or left saide is the propert
+//right side or string/value/boolean/array is the value type
+const data = {
+   name: 'JD',
+   age: 44,
+   info: {
+      location: 'Atl',
+      hobbies: [
+         {
+            name: 'Fishing',
+            frequency: 'once every two weeks'
+         },
+         {
+            name: 'Pickleball',
+            frequency: 'once a week'
+         }
+      ]
+   }
+};
 
-//Call your function 4 times with different numbers and operators to confirm if it is working correctly
+console.log(data.info.hobbies[0].frequency);
+
+
+//if you only wanted to call certin or multiple items withing this
+const filtered = data.info.hobbies.filter(function(obj) {
+   if (obj.frequency > 1) {
+      return true;
+   }
+})
 
 
 /*
 
-function calculator(num1, num2, operator) {
-   if (typeof num1 === 'number' && typeof num2 === 'number' && typeof operator === 'string') {
-      if (operator === '+') {
-         console.log(num1 + num2);
-      }
-      else if (operator === '-') {
-         console.log(num1 - num2);
-      }
-      else if (operator === '*') {
-         console.log(num1 * num2);
-      }
-      else if (operator === '/') {
-         console.log(num1 / num2);
-      }
-      else {
-         console.log('invalid answer')
-      }
-   }
-   else {
-      if (typeof num1 !== 'number') {
-         console.log("The first input is not a numeric value")
-      }
-      else if (typeof num2 !== 'number') {
-         console.log("The second input is not a numeric value")
-      }
-      else if (typeof operator !== 'string') {
-         console.log("The third input is not a string value")
-      }
-         
-   }
-}
+data.name
+//to call the value: 
+//you will call the vakue and it;s key pair
+// this would be to call 'emily'
 
 
-calculator ("20", "10", '+')
+//example of reasigning a value
+data.name = 'Bob';
+data.age++;
+
+console.log(data);
+
+console.log(data.name)
+
 
 */
-
-
-
-
-
-
-/*
-
-function calculator(num1, num2, operator) {
-   switch (operator) {
-      case '+':
-         console.log(num1 + num2);
-         break;
-      case '-':
-         console.log(num1 - num2);
-         break;
-      case '*':
-         console.log (num1 * num2)
-         break;
-      case '/':
-         console.log (num1 / num2)
-         break;
-      default:
-         console.log('you must provide a valid operator');
-   }
-}
-
-
-calculator(20, 10, '+')
-calculator(20, 10, '-')
-calculator(20, 10, '*')
-calculator(20, 10, '/')
-
-
-
-
-//'return' is the function's anwer
-
-
-function add(num1, num2) {
-   return 'something else'
-   }
-   console.log (add());
-
-//===============
-   add(5,10);
-   console.log ('something after our function call')
-   
-*/
-
-function calculator(num1, num2, operator) {
-   switch (operator) {
-      case '+':
-         return num1 + num2;
-      case '-':
-         return num1 - num2;
-      case '*':
-         return num1 * num2;
-      case '/':
-         return num1 / num2;
-      default:
-         return 'you must provide a valid operator';
-   }
-}
-
-
-const sum = calculator(20, 10, '+');
-console.log (sum);
-const kevin = 5;
-console.log (typeof(kevin));
-
-calculator(20, 10, '-')
-calculator(20, 10, '*')
-calculator(20, 10, '/')
-
