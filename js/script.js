@@ -1,57 +1,80 @@
-//review: we have talked about:
-const str = 'some string';
-const num = 10;
-const bool = true;
-const arr = ['john', 'Bob', 'Steve'];
+//when the page loads, show a button that the user clicks
+//when the button is clicked, show a prompt for first name, last name and age
+//we will store the three vaue to an object
+//print data object values to the brwoser window
 
+const gatherBtn = document.querySelector('#gather-btn');
 
-//this is for key value pairs
-//name and age, or left saide is the propert
-//right side or string/value/boolean/array is the value type
-const data = {
-   name: 'JD',
-   age: 44,
-   info: {
-      location: 'Atl',
-      hobbies: [
-         {
-            name: 'Fishing',
-            frequency: 'once every two weeks'
-         },
-         {
-            name: 'Pickleball',
-            frequency: 'once a week'
-         }
-      ]
+function gatherInfo() {
+   let firstName, lastName, age;
+   let ask = true
+   
+   
+   while (ask) {
+      firstName = prompt('Please enter your first name');
+      if() {
+         console.log('hello');
+         continue;
+      }
+      else {
+         console.log(firstName);
+      }
+      /*
+      lastName = prompt('Please enter your last name');
+      if(!lastName) {
+         continue;
+      }
+      age =prompt('Pleasae enter your age');
+      if(!age) {
+         continue;
+      }
+      */
+      ask = false;
+     }
    }
-};
-
-console.log(data.info.hobbies[0].frequency);
-
-
-//if you only wanted to call certin or multiple items withing this
-const filtered = data.info.hobbies.filter(function(obj) {
-   if (obj.frequency > 1) {
-      return true;
-   }
-})
-
-
 /*
+  while (!firstName || !lastName || !age) {
+   firstName = prompt('Please enter your first name');
+   lastName = prompt('Please enter your last name');
+   age =prompt('Pleasae enter your age');
+  }
+}
+//this would loop until all three values are input
+*/
 
-data.name
-//to call the value: 
-//you will call the vakue and it;s key pair
-// this would be to call 'emily'
+
+   gatherBtn.addEventListener('click', gatherInfo);
+
+  /*
+  
+   console.log(firstName);
+   }
+   if (!firstName || !lastName || !age) {
+      alert('You must fill out all values');
+      return gatherInfo();
+   }
+   gatherBtn.addEventListener('click', gatherInfo);
+*/
 
 
-//example of reasigning a value
-data.name = 'Bob';
-data.age++;
 
-console.log(data);
 
-console.log(data.name)
 
+
+
+
+
+
+///console.log(gatherBtn.innerText);
+///console.log(h1.innerText);
+
+
+//to make an action after clicking the button
+/*
+function gatherInfo() {
+console.log ('clicked');
+}
+
+gatherBtn.addEventListener('click', gatherInfo);
 
 */
